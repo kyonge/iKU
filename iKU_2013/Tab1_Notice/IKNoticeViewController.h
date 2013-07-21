@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "IKNoticeCell.h"
+
 #import "IKSubViewController.h"
 
-@interface IKNoticeViewController : IKSubViewController
+@interface IKNoticeViewController : IKSubViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

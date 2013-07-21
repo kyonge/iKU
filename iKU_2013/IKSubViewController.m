@@ -35,4 +35,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - 보이기/숨기기
+
+- (void)showView
+{
+    [[self view] setHidden:NO];
+}
+
+- (void)hideView
+{
+    [[self view] setHidden:YES];
+}
+
 @end

@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self loadSubViews];
 }
 
 - (void)viewDidLayoutSubviews
@@ -33,6 +34,8 @@
 
 
 #pragma mark - 초기화
+
+#pragma mark 메뉴 로드
 
 - (void)loadMenu
 {
@@ -52,6 +55,27 @@
     
     [menuScrollView addSubview:menuView];
     [menuScrollView setContentSize:[menuView frame].size];
+}
+
+#pragma mark 서브뷰 로드
+
+- (void)loadSubViews
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
+    noticeViewController = [storyboard instantiateViewControllerWithIdentifier:@"IKNoticeViewController"];
+    scheduleViewController = [IKScheduleViewController new];
+    ekuViewController = [IKEKUViewController new];
+    
+    [[noticeViewController view] setFrame:CGRectMake(0, 0, 320, [contentsView frame].size.height)];
+    
+    [contentsView addSubview:[noticeViewController view]];
+    [contentsView addSubview:[scheduleViewController view]];
+    [contentsView addSubview:[ekuViewController view]];
+    
+    [noticeViewController showView];
+    [scheduleViewController hideView];
+    [ekuViewController hideView];
 }
 
 

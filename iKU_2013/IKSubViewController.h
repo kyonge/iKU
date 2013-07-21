@@ -10,4 +10,8 @@
 
 @interface IKSubViewController : UIViewController
 
+#pragma mark - 보이기/숨기기
+- (void)showView;
+- (void)hideView;
+
 @end

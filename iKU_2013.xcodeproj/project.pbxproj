@@ -19,13 +19,13 @@
 		DF361E12179B967200A09513 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF361E10179B967200A09513 /* MainStoryboard.storyboard */; };
 		DF361E15179B967200A09513 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF361E14179B967200A09513 /* ViewController.m */; };
 		DF6A34B8179BAD0A00CCD75E /* IKNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A34B6179BAD0A00CCD75E /* IKNoticeViewController.m */; };
-		DF6A34B9179BAD0A00CCD75E /* IKNoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6A34B7179BAD0A00CCD75E /* IKNoticeViewController.xib */; };
 		DF6A34BE179BC11B00CCD75E /* IKEKUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A34BC179BC11B00CCD75E /* IKEKUViewController.m */; };
 		DF6A34BF179BC11B00CCD75E /* IKEKUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6A34BD179BC11B00CCD75E /* IKEKUViewController.xib */; };
 		DF6A34C4179BC13C00CCD75E /* IKScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A34C2179BC13C00CCD75E /* IKScheduleViewController.m */; };
 		DF6A34C5179BC13C00CCD75E /* IKScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6A34C3179BC13C00CCD75E /* IKScheduleViewController.xib */; };
 		DF6A34C9179BC28000CCD75E /* IKSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A34C8179BC28000CCD75E /* IKSubViewController.m */; };
 		DF6D10EB179BCA0700DB88D0 /* EtenCalendarUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D10EA179BCA0700DB88D0 /* EtenCalendarUtility.m */; };
+		DF6D10EE179BDA7E00DB88D0 /* IKNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D10ED179BDA7E00DB88D0 /* IKNoticeCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		DF361E14179B967200A09513 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DF6A34B5179BAD0A00CCD75E /* IKNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKNoticeViewController.h; path = Tab1_Notice/IKNoticeViewController.h; sourceTree = "<group>"; };
 		DF6A34B6179BAD0A00CCD75E /* IKNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKNoticeViewController.m; path = Tab1_Notice/IKNoticeViewController.m; sourceTree = "<group>"; };
-		DF6A34B7179BAD0A00CCD75E /* IKNoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IKNoticeViewController.xib; path = Tab1_Notice/IKNoticeViewController.xib; sourceTree = "<group>"; };
 		DF6A34BB179BC11B00CCD75E /* IKEKUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKEKUViewController.h; path = Tab3_EKU/IKEKUViewController.h; sourceTree = "<group>"; };
 		DF6A34BC179BC11B00CCD75E /* IKEKUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKEKUViewController.m; path = Tab3_EKU/IKEKUViewController.m; sourceTree = "<group>"; };
 		DF6A34BD179BC11B00CCD75E /* IKEKUViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IKEKUViewController.xib; path = Tab3_EKU/IKEKUViewController.xib; sourceTree = "<group>"; };
@@ -58,6 +57,8 @@
 		DF6A34C8179BC28000CCD75E /* IKSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSubViewController.m; sourceTree = "<group>"; };
 		DF6D10E9179BCA0700DB88D0 /* EtenCalendarUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EtenCalendarUtility.h; sourceTree = "<group>"; };
 		DF6D10EA179BCA0700DB88D0 /* EtenCalendarUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EtenCalendarUtility.m; sourceTree = "<group>"; };
+		DF6D10EC179BDA7E00DB88D0 /* IKNoticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKNoticeCell.h; path = Tab1_Notice/IKNoticeCell.h; sourceTree = "<group>"; };
+		DF6D10ED179BDA7E00DB88D0 /* IKNoticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKNoticeCell.m; path = Tab1_Notice/IKNoticeCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +140,8 @@
 			children = (
 				DF6A34B5179BAD0A00CCD75E /* IKNoticeViewController.h */,
 				DF6A34B6179BAD0A00CCD75E /* IKNoticeViewController.m */,
-				DF6A34B7179BAD0A00CCD75E /* IKNoticeViewController.xib */,
+				DF6D10EC179BDA7E00DB88D0 /* IKNoticeCell.h */,
+				DF6D10ED179BDA7E00DB88D0 /* IKNoticeCell.m */,
 			);
 			name = Tab1_Notice;
 			sourceTree = "<group>";
@@ -229,7 +231,6 @@
 				DF361E0D179B967200A09513 /* Default@2x.png in Resources */,
 				DF361E0F179B967200A09513 /* Default-568h@2x.png in Resources */,
 				DF361E12179B967200A09513 /* MainStoryboard.storyboard in Resources */,
-				DF6A34B9179BAD0A00CCD75E /* IKNoticeViewController.xib in Resources */,
 				DF6A34BF179BC11B00CCD75E /* IKEKUViewController.xib in Resources */,
 				DF6A34C5179BC13C00CCD75E /* IKScheduleViewController.xib in Resources */,
 			);
@@ -250,6 +251,7 @@
 				DF6A34C4179BC13C00CCD75E /* IKScheduleViewController.m in Sources */,
 				DF6A34C9179BC28000CCD75E /* IKSubViewController.m in Sources */,
 				DF6D10EB179BCA0700DB88D0 /* EtenCalendarUtility.m in Sources */,
+				DF6D10EE179BDA7E00DB88D0 /* IKNoticeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

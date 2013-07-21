@@ -24,10 +24,11 @@ enum IKTab {
 
 @interface ViewController : UIViewController {
     IBOutlet UIScrollView *menuScrollView;
-    IBOutlet UIScrollView *contentsScrollView;
+    IBOutlet UIView *contentsView;
     
     IKNoticeViewController *noticeViewController;
     IKScheduleViewController *scheduleViewController;
+    IKEKUViewController *ekuViewController;
 }
 
 @end
