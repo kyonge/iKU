@@ -25,6 +25,7 @@
 		DF6A34C4179BC13C00CCD75E /* IKScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A34C2179BC13C00CCD75E /* IKScheduleViewController.m */; };
 		DF6A34C5179BC13C00CCD75E /* IKScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6A34C3179BC13C00CCD75E /* IKScheduleViewController.xib */; };
 		DF6A34C9179BC28000CCD75E /* IKSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6A34C8179BC28000CCD75E /* IKSubViewController.m */; };
+		DF6D10EB179BCA0700DB88D0 /* EtenCalendarUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D10EA179BCA0700DB88D0 /* EtenCalendarUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		DF6A34C3179BC13C00CCD75E /* IKScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IKScheduleViewController.xib; path = Tab2_Schedule/IKScheduleViewController.xib; sourceTree = "<group>"; };
 		DF6A34C7179BC28000CCD75E /* IKSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSubViewController.h; sourceTree = "<group>"; };
 		DF6A34C8179BC28000CCD75E /* IKSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSubViewController.m; sourceTree = "<group>"; };
+		DF6D10E9179BCA0700DB88D0 /* EtenCalendarUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EtenCalendarUtility.h; sourceTree = "<group>"; };
+		DF6D10EA179BCA0700DB88D0 /* EtenCalendarUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EtenCalendarUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 				DF6A34BA179BAD0F00CCD75E /* Tab1_Notice */,
 				DF6A34C6179BC13F00CCD75E /* Tab2_Schedule */,
 				DF6A34C0179BC11F00CCD75E /* Tab3_EKU */,
+				DF6D10E8179BCA0700DB88D0 /* Utility */,
 				DF361DFF179B967200A09513 /* Supporting Files */,
 			);
 			path = iKU_2013;
@@ -158,6 +162,15 @@
 				DF6A34C3179BC13C00CCD75E /* IKScheduleViewController.xib */,
 			);
 			name = Tab2_Schedule;
+			sourceTree = "<group>";
+		};
+		DF6D10E8179BCA0700DB88D0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DF6D10E9179BCA0700DB88D0 /* EtenCalendarUtility.h */,
+				DF6D10EA179BCA0700DB88D0 /* EtenCalendarUtility.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +249,7 @@
 				DF6A34BE179BC11B00CCD75E /* IKEKUViewController.m in Sources */,
 				DF6A34C4179BC13C00CCD75E /* IKScheduleViewController.m in Sources */,
 				DF6A34C9179BC28000CCD75E /* IKSubViewController.m in Sources */,
+				DF6D10EB179BCA0700DB88D0 /* EtenCalendarUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
