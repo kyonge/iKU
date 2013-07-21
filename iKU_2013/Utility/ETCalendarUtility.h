@@ -1,5 +1,5 @@
 //
-//  EtenCalendarUtility.h
+//  ETCalendarUtility.h
 //  FashionDiary
 //
 //  Created by 기용 이 on 13. 2. 20..
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EtenCalendarUtility : NSObject
+@interface ETCalendarUtility : NSObject
 
 #pragma mark 달력 유틸리티 메서드
 

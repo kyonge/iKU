@@ -1,14 +1,14 @@
 //
-//  EtenCalendarUtility.m
+//  ETCalendarUtility.m
 //  FashionDiary
 //
 //  Created by 기용 이 on 13. 2. 20..
 //  Copyright (c) 2013년 기용 이. All rights reserved.
 //
 
-#import "EtenCalendarUtility.h"
+#import "ETCalendarUtility.h"
 
-@implementation EtenCalendarUtility
+@implementation ETCalendarUtility
 
 #pragma mark 달력 유틸리티 메서드
 
@@ -23,7 +23,7 @@
 
 + (NSArray *)datetimeObject:(NSDate *)stDate
 {
-    NSString *strDate = [EtenCalendarUtility dateString:stDate format:@"yyyy:MM:dd:HH:mm:SS"];
+    NSString *strDate = [ETCalendarUtility dateString:stDate format:@"yyyy:MM:dd:HH:mm:SS"];
     NSArray *arrDate = [strDate componentsSeparatedByString:@":"];
     
     if ([arrDate count] == 6) {
@@ -35,7 +35,7 @@
 
 + (NSInteger) valueforDate:(NSDate *)stDate Key:(NSInteger)key
 {
-    NSInteger result = [[[EtenCalendarUtility datetimeObject:stDate] objectAtIndex:key] intValue];
+    NSInteger result = [[[ETCalendarUtility datetimeObject:stDate] objectAtIndex:key] intValue];
     
     return result;
 }
@@ -51,11 +51,11 @@
 
 + (NSInteger)MonthDays:(NSDate *)inDate
 {
-    NSInteger year = [EtenCalendarUtility valueforDate:inDate Key:0];
-    NSInteger month = [EtenCalendarUtility valueforDate:inDate Key:1];
+    NSInteger year = [ETCalendarUtility valueforDate:inDate Key:0];
+    NSInteger month = [ETCalendarUtility valueforDate:inDate Key:1];
     
     if (month == 2) {
-        return [EtenCalendarUtility LeapYearCalculation:year];
+        return [ETCalendarUtility LeapYearCalculation:year];
     }
     else if (month == 7) {
         return 31;
@@ -77,10 +77,10 @@
         edDate = [NSDate date];
     }
     
-    stMonth = ([[[EtenCalendarUtility datetimeObject:stDate] objectAtIndex:0]intValue] * 12) +
-    ([[[EtenCalendarUtility datetimeObject:stDate] objectAtIndex:1]intValue]);
-    edMonth = ([[[EtenCalendarUtility datetimeObject:edDate] objectAtIndex:0]intValue] * 12) +
-    ([[[EtenCalendarUtility datetimeObject:edDate] objectAtIndex:1]intValue]);
+    stMonth = ([[[ETCalendarUtility datetimeObject:stDate] objectAtIndex:0]intValue] * 12) +
+    ([[[ETCalendarUtility datetimeObject:stDate] objectAtIndex:1]intValue]);
+    edMonth = ([[[ETCalendarUtility datetimeObject:edDate] objectAtIndex:0]intValue] * 12) +
+    ([[[ETCalendarUtility datetimeObject:edDate] objectAtIndex:1]intValue]);
     
     result = edMonth - stMonth;
     

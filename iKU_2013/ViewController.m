@@ -68,6 +68,7 @@
     ekuViewController = [IKEKUViewController new];
     
     [[noticeViewController view] setFrame:CGRectMake(0, 0, 320, [contentsView frame].size.height)];
+    [[scheduleViewController view] setFrame:CGRectMake(0, 0, 320, [contentsView frame].size.height)];
     
     [contentsView addSubview:[noticeViewController view]];
     [contentsView addSubview:[scheduleViewController view]];
@@ -81,15 +82,24 @@
 
 #pragma mark - 탭 선택
 
+- (void)hideAllSubViews
+{
+    [noticeViewController hideView];
+    [scheduleViewController hideView];
+    [ekuViewController hideView];
+}
+
 - (void)selectTab:(id)sender
 {
     enum IKTab senderTag = (enum IKTab)[sender tag];
     
+    [self hideAllSubViews];
+    
     if (senderTag == IKTab1_Notice) {
-        
+        [noticeViewController showView];
     }
     else if (senderTag == IKTab2_Schedule) {
-        
+        [scheduleViewController showView];
     }
     else if (senderTag == IKTab3_EKU) {
         
