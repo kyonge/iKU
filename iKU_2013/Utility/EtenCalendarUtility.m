@@ -17,7 +17,7 @@
 	[fmt setTimeStyle:NSDateFormatterNoStyle];
 	[fmt setDateFormat:format];
 	NSString *s = [fmt stringFromDate:date];
-	[fmt release];
+    
 	return s;
 }
 
