@@ -8,6 +8,8 @@
 
 #import "ETUtility.h"
 
+static UIActivityIndicatorView *loadingAnimationController;
+
 @implementation ETUtility
 
 #pragma mark - UIAlertView
@@ -75,21 +77,26 @@
 }
 
 
-//#pragma mark - 인디케이터
-//
-//+ (void)showActivityIndicatorView:(UIView *)superView
-//{
-//    //    NSLog(@"Show Loading");
-//    LoadingAnimationController *loadingAnimationController = [[UserInfo sharedInfo] loadingAnimationController];
-//    [loadingAnimationController startLoading:superView];
-//}
-//
-//+ (void)hideActivityIndicatorView
-//{
-//    //    NSLog(@"Hide Loading");
-//    LoadingAnimationController *loadingAnimationController = [[UserInfo sharedInfo] loadingAnimationController];
-//    [loadingAnimationController endLoading];
-//}
+#pragma mark - 인디케이터
+
++ (void)showActivityIndicatorView:(UIView *)superView
+{
+//    NSLog(@"Show Loading");
+    if (!loadingAnimationController) {
+        loadingAnimationController = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [loadingAnimationController setCenter:CGPointMake(160, [superView frame].size.height / 2)];
+        [loadingAnimationController setColor:[UIColor colorWithRed:116 / 255.0 green:0 blue:23 / 255.5 alpha:1.0]];
+        [loadingAnimationController setHidesWhenStopped:YES];
+    }
+    [superView addSubview:loadingAnimationController];
+    [loadingAnimationController startAnimating];
+}
+
++ (void)hideActivityIndicatorView
+{
+//    NSLog(@"Hide Loading");
+    [loadingAnimationController stopAnimating];
+}
 
 
 #pragma mark - ETC

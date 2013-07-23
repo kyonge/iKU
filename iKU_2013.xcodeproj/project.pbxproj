@@ -28,6 +28,10 @@
 		DF6D10EE179BDA7E00DB88D0 /* IKNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D10ED179BDA7E00DB88D0 /* IKNoticeCell.m */; };
 		DF6D10F1179C239200DB88D0 /* IKCalendarDateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D10F0179C239200DB88D0 /* IKCalendarDateButton.m */; };
 		DF6D10F4179C480300DB88D0 /* ETUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6D10F3179C480300DB88D0 /* ETUtility.m */; };
+		DF8BE9F6179EAE4E00636436 /* IKNoticeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8BE9F5179EAE4E00636436 /* IKNoticeLoader.m */; };
+		DF8BE9FC179EB38E00636436 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8BE9F9179EB38E00636436 /* HTMLNode.m */; };
+		DF8BE9FD179EB38E00636436 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8BE9FB179EB38E00636436 /* HTMLParser.m */; };
+		DF8BE9FF179EB74800636436 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8BE9FE179EB74800636436 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,13 @@
 		DF6D10F0179C239200DB88D0 /* IKCalendarDateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCalendarDateButton.m; path = Tab2_Schedule/IKCalendarDateButton.m; sourceTree = "<group>"; };
 		DF6D10F2179C480300DB88D0 /* ETUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETUtility.h; sourceTree = "<group>"; };
 		DF6D10F3179C480300DB88D0 /* ETUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETUtility.m; sourceTree = "<group>"; };
+		DF8BE9F4179EAE4E00636436 /* IKNoticeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKNoticeLoader.h; path = Tab1_Notice/IKNoticeLoader.h; sourceTree = "<group>"; };
+		DF8BE9F5179EAE4E00636436 /* IKNoticeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKNoticeLoader.m; path = Tab1_Notice/IKNoticeLoader.m; sourceTree = "<group>"; };
+		DF8BE9F8179EB38E00636436 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		DF8BE9F9179EB38E00636436 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		DF8BE9FA179EB38E00636436 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		DF8BE9FB179EB38E00636436 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		DF8BE9FE179EB74800636436 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8BE9FF179EB74800636436 /* libxml2.dylib in Frameworks */,
 				DF361DF9179B967200A09513 /* UIKit.framework in Frameworks */,
 				DF361DFB179B967200A09513 /* Foundation.framework in Frameworks */,
 				DF361DFD179B967200A09513 /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +113,7 @@
 		DF361DF7179B967200A09513 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF8BE9FE179EB74800636436 /* libxml2.dylib */,
 				DF361DF8179B967200A09513 /* UIKit.framework */,
 				DF361DFA179B967200A09513 /* Foundation.framework */,
 				DF361DFC179B967200A09513 /* CoreGraphics.framework */,
@@ -146,6 +159,8 @@
 			children = (
 				DF6A34B5179BAD0A00CCD75E /* IKNoticeViewController.h */,
 				DF6A34B6179BAD0A00CCD75E /* IKNoticeViewController.m */,
+				DF8BE9F4179EAE4E00636436 /* IKNoticeLoader.h */,
+				DF8BE9F5179EAE4E00636436 /* IKNoticeLoader.m */,
 				DF6D10EC179BDA7E00DB88D0 /* IKNoticeCell.h */,
 				DF6D10ED179BDA7E00DB88D0 /* IKNoticeCell.m */,
 			);
@@ -181,8 +196,20 @@
 				DF6D10F3179C480300DB88D0 /* ETUtility.m */,
 				DF6D10E9179BCA0700DB88D0 /* ETCalendarUtility.h */,
 				DF6D10EA179BCA0700DB88D0 /* ETCalendarUtility.m */,
+				DF8BE9F7179EB38E00636436 /* HTMLParser */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		DF8BE9F7179EB38E00636436 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				DF8BE9F8179EB38E00636436 /* HTMLNode.h */,
+				DF8BE9F9179EB38E00636436 /* HTMLNode.m */,
+				DF8BE9FA179EB38E00636436 /* HTMLParser.h */,
+				DF8BE9FB179EB38E00636436 /* HTMLParser.m */,
+			);
+			path = HTMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +291,9 @@
 				DF6D10EE179BDA7E00DB88D0 /* IKNoticeCell.m in Sources */,
 				DF6D10F1179C239200DB88D0 /* IKCalendarDateButton.m in Sources */,
 				DF6D10F4179C480300DB88D0 /* ETUtility.m in Sources */,
+				DF8BE9F6179EAE4E00636436 /* IKNoticeLoader.m in Sources */,
+				DF8BE9FC179EB38E00636436 /* HTMLNode.m in Sources */,
+				DF8BE9FD179EB38E00636436 /* HTMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +380,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iKU_2013/iKU_2013-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "iKU_2013/iKU_2013-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -361,6 +392,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iKU_2013/iKU_2013-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "iKU_2013/iKU_2013-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

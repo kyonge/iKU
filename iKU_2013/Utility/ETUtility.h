@@ -27,9 +27,9 @@
 + (UIImage *)resizeImage:(UIImage *)imageSource ToSize:(CGSize)newSize;
 + (UIImage *)imageByCropping:(UIImage *)imageToCrop toRect:(CGRect)rect;
 
-//#pragma mark - 인디케이터
-//+ (void)showActivityIndicatorView:(UIView *)superView;
-//+ (void)hideActivityIndicatorView;
+#pragma mark - 인디케이터
++ (void)showActivityIndicatorView:(UIView *)superView;
++ (void)hideActivityIndicatorView;
 
 #pragma mark - ETC
 + (BOOL)is4Inch;

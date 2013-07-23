@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface IKNoticeCell : UITableViewCell {
+    IBOutlet UILabel *noticeIndexLabel;
     IBOutlet UILabel *noticeTitleLabel;
     IBOutlet UILabel *noticeDateLabel;
+    
+    NSString *noticeUrlString;
 }
 
+@property (readwrite) UILabel *noticeIndexLabel;
 @property (readwrite) UILabel *noticeTitleLabel;
 @property (readwrite) UILabel *noticeDateLabel;
+@property (readwrite) NSString *noticeUrlString;
 
 @end

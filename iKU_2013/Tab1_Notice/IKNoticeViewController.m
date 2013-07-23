@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self initNoticeList];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,13 +37,75 @@
 }
 
 
+#pragma mark - 초기화
+
+- (void)initNoticeList
+{
+    [noticeButton1 setSelected:YES];
+    
+    [ETUtility showActivityIndicatorView:[self view]];
+    
+    IKNoticeLoader *noticeLoader = [IKNoticeLoader new];
+    [noticeLoader setDelegate:self];
+    [noticeLoader loadNotice:IKNoticeType1_E];
+}
+
+
+#pragma mark - 탭 선택
+
+- (IBAction)selectTab:(id)sender
+{
+    [self enableAll:NO];
+    
+    [self disSelectAll];
+    [sender setSelected:YES];
+    
+    [ETUtility showActivityIndicatorView:[self view]];
+    
+    [noticeListArray removeAllObjects];
+    
+    IKNoticeLoader *noticeLoader = [IKNoticeLoader new];
+    [noticeLoader setDelegate:self];
+    [noticeLoader loadNotice:[sender tag]];
+}
+
+- (void)enableAll:(BOOL)enable
+{
+    [noticeButton1 setUserInteractionEnabled:enable];
+    [noticeButton2 setUserInteractionEnabled:enable];
+    [noticeButton3 setUserInteractionEnabled:enable];
+    [noticeButton4 setUserInteractionEnabled:enable];
+}
+
+- (void)disSelectAll
+{
+    [noticeButton1 setSelected:NO];
+    [noticeButton2 setSelected:NO];
+    [noticeButton3 setSelected:NO];
+    [noticeButton4 setSelected:NO];
+}
+
+
 #pragma mark - 델리게이트 메서드
+
+#pragma mark * IKNoticeLoaderDelegate
+
+- (void)noticeListLoaded:(NSMutableArray *)noticeList
+{
+    [ETUtility hideActivityIndicatorView];
+    
+    noticeListArray = noticeList;
+//    NSLog(@"%@", noticeListArray);
+    
+    [noticeListTableView reloadData];
+    [self enableAll:YES];
+}
 
 #pragma mark UITableViewDelegate & UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [noticeListArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -53,8 +116,11 @@
         cell = [[IKNoticeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    [[cell noticeTitleLabel] setText:@"타이틀"];
-    [[cell noticeDateLabel] setText:@"날짜"];
+    NSDictionary *tempNoticeDic = [noticeListArray objectAtIndex:indexPath.row];
+    
+    [[cell noticeIndexLabel] setText:[tempNoticeDic objectForKey:@"index"]];
+    [[cell noticeTitleLabel] setText:[tempNoticeDic objectForKey:@"title"]];
+    [[cell noticeDateLabel] setText:[tempNoticeDic objectForKey:@"date"]];
     
     return cell;
 }

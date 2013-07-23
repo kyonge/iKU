@@ -10,8 +10,10 @@
 
 @implementation IKNoticeCell
 
+@synthesize noticeIndexLabel;
 @synthesize noticeTitleLabel;
 @synthesize noticeDateLabel;
+@synthesize noticeUrlString;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
