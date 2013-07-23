@@ -62,8 +62,6 @@
     
     [ETUtility showActivityIndicatorView:[self view]];
     
-    [noticeListArray removeAllObjects];
-    
     IKNoticeLoader *noticeLoader = [IKNoticeLoader new];
     [noticeLoader setDelegate:self];
     [noticeLoader loadNotice:[sender tag]];
@@ -71,6 +69,8 @@
 
 - (void)enableAll:(BOOL)enable
 {
+    [noticeListTableView setAllowsSelection:enable];
+    
     [noticeButton1 setUserInteractionEnabled:enable];
     [noticeButton2 setUserInteractionEnabled:enable];
     [noticeButton3 setUserInteractionEnabled:enable];

@@ -23,7 +23,13 @@
     noticeType = type;
     nextPage = 1;
     
-    [NSThread detachNewThreadSelector:@selector(crawlData) toTarget:self withObject:nil];
+//    [NSThread detachNewThreadSelector:@selector(crawlData) toTarget:self withObject:nil];
+    
+    while ([self parseBoardList:[self loadNotice:noticeType WithPage:++nextPage]]) {
+//        NSLog(@"donePage : %d", nextPage);
+    }
+    
+    [delegate noticeListLoaded:boardListArray];
 }
 
 - (void)crawlData
@@ -83,12 +89,9 @@
     
     //페이징
     HTMLNode *pagingNode = [tableNode nextSibling];
-    NSString *pagingString = [pagingNode allContents];
-    NSArray *pagingArray = [pagingString componentsSeparatedByString:@"\n"];
-    for (NSString *tempString in pagingArray) {
-        NSString *tempPage = [tempString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//        if ([tempPage length]) NSLog(@"%@, %d", tempPage, nextPage);
-        if ([tempPage isEqualToString:[NSString stringWithFormat:@"%d", nextPage]])
+    NSArray *pagingArray = [pagingNode findChildTags:@"span"];
+    for (HTMLNode *tempNode in pagingArray) {
+        if ([[tempNode allContents] isEqualToString:[NSString stringWithFormat:@"%d", nextPage]])
             return YES;
     }
     
