@@ -127,7 +127,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *tempNoticeDic = [noticeListArray objectAtIndex:indexPath.row];
     
+    NSLog(@"%@", [tempNoticeDic objectForKey:@"link"]);
 }
 
 @end
