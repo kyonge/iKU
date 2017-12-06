@@ -1,3 +1,2 @@
 language: objective-c
-xcode_project: ETAccount_iOS.xcodeproj # path to your xcodeproj folder
-xcode_scheme: ETAccount_iOSTests
+xcode_project: iKU_2013.xcodeproj
