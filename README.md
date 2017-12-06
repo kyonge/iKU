@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/kyonge/iKU.svg?branch=master">
+
 iKU
 ===
 
